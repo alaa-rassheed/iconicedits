@@ -1069,7 +1069,7 @@
 	
 	.light-content .has-mask-fill > span, .dark-section .has-mask-fill > span {
 		-webkit-text-fill-color: rgb(205, 220, 57, 0.1);
-		background-image: linear-gradient(#cddc39, #f0f4c3);
+		background-image: linear-gradient(#7BBE25, #f0f4c3);
 	}
 	
 	.light-content .light-section .has-mask-fill > span {
@@ -1077,7 +1077,7 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		background-repeat: no-repeat;
-		background-image: linear-gradient(#afb42b, #cddc39);
+		background-image: linear-gradient(#afb42b, #7BBE25);
 	}
 	
 	.has-indent {
@@ -3177,7 +3177,7 @@
 	}
 	
 	.light-content .list-rotator li , .dark-section .list-rotator li {
-		color: #cddc39;
+		color: #7BBE25;
 	}
 	
 	.light-content .light-section .list-rotator li {
