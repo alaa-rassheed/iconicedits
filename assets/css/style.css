@@ -1,11 +1,3 @@
-/*------------------------------------------------------------------
-Project:	Serano - Creative Portfolio Template
-Version:	1.0
-Last change:	15/08/2022
-Assigned to:	www.anonymous.com 
-Primary use:	Showcase Portfolio 
--------------------------------------------------------------------*/
-
 @import url("./content.css");
 @import url("./showcase.css");
 @import url("./shortcodes.css");
@@ -26,6 +18,11 @@ Primary use:	Showcase Portfolio
 /*--------------------------------------------------
 	01. General Settings
 ---------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -36,11 +33,16 @@ body {
   width: 100%;
   color: #444;
   background-color: #fff;
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
 }
 
 html {
@@ -383,8 +385,8 @@ ol {
   list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
   margin: 20px 0px 15px 25px;
 }
 
@@ -422,8 +424,8 @@ figure img {
   max-width: 100%;
 }
 
-.has-parallax-content > img,
-.has-parallax > img {
+.has-parallax-content>img,
+.has-parallax>img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -462,10 +464,9 @@ input {
 
 input,
 textarea {
-  background-image: -webkit-linear-gradient(
-    hsla(0, 0%, 100%, 0),
-    hsla(0, 0%, 100%, 0)
-  ); /* Removing the inner shadow, rounded corners on iOS inputs */
+  background-image: -webkit-linear-gradient(hsla(0, 0%, 100%, 0),
+      hsla(0, 0%, 100%, 0));
+  /* Removing the inner shadow, rounded corners on iOS inputs */
 }
 
 button,
@@ -1011,21 +1012,6 @@ a:hover {
   padding-bottom: 4vw;
   padding-left: 80px;
   padding-right: 80px;
-}
-
-#rotate-device {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: #0f1010;
-  background-image: url(images/rotate.png);
-  background-size: 100px 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: none;
 }
 
 i.arrow-icon {
@@ -1741,10 +1727,7 @@ scale-up .link,
 .loadbar {
   width: 0;
   height: 100%;
-  background-image: url(../images/intro.jpg);
-  background-size: cover contain;
-  background-repeat: no-repeat;
-  background-position: top top;
+  background: #fff;
   position: absolute;
   top: 0px;
   left: 0;
@@ -1752,6 +1735,7 @@ scale-up .link,
   overflow: hidden;
   z-index: 0;
 }
+
 .loadbar.other {
   width: 0;
   height: 100%;
@@ -2119,7 +2103,7 @@ nav.open {
     opacity: 1;
   }
 
-  .classic-menu .flexnav li > ul li {
+  .classic-menu .flexnav li>ul li {
     margin-left: 0;
     padding: 0;
     opacity: 1 !important;
@@ -2187,13 +2171,13 @@ nav.open {
     transform: rotate(-90deg);
   }
 
-  .classic-menu .flexnav li ul li > ul,
+  .classic-menu .flexnav li ul li>ul,
   .classic-menu .flexnav li ul.open ul.open {
     top: -5px;
     z-index: 10;
   }
 
-  .classic-menu .flexnav li:last-child ul li > ul,
+  .classic-menu .flexnav li:last-child ul li>ul,
   .classic-menu .flexnav li:last-child ul.open ul.open {
     margin-left: -100%;
     left: -5px !important;
@@ -2293,7 +2277,7 @@ nav.open {
   }
 
   .fullscreen-menu .flexnav:hover li ul li a.active,
-  .fullscreen-menu .flexnav:hover li ul li:hover > a {
+  .fullscreen-menu .flexnav:hover li ul li:hover>a {
     opacity: 1;
   }
 
@@ -2305,7 +2289,7 @@ nav.open {
     border-bottom: none;
   }
 
-  .fullscreen-menu .flexnav > li > a {
+  .fullscreen-menu .flexnav>li>a {
     font-family: "Six Caps", sans-serif;
     font-weight: 500;
     font-size: calc(1rem + 8vw);
@@ -2345,7 +2329,7 @@ nav.open {
   }
 
   .fullscreen-menu .flexnav:hover li ul li a.active,
-  .fullscreen-menu .flexnav:hover li ul li:hover > a {
+  .fullscreen-menu .flexnav:hover li ul li:hover>a {
     opacity: 1;
   }
 
@@ -2382,7 +2366,7 @@ nav.open {
     background: transparent;
   }
 
-  .fullscreen-menu .flexnav li ul li > ul,
+  .fullscreen-menu .flexnav li ul li>ul,
   .fullscreen-menu .flexnav li ul.open ul.open {
     margin-left: 0;
     top: 0;
@@ -2514,31 +2498,19 @@ nav.open {
   left: 20px;
 }
 
-.button-wrap.right.menu.burger-dots
-  .icon-wrap:hover
-  #menu-burger
-  span:nth-child(1) {
+.button-wrap.right.menu.burger-dots .icon-wrap:hover #menu-burger span:nth-child(1) {
   left: 10px;
 }
 
-.button-wrap.right.menu.burger-dots
-  .icon-wrap:hover
-  #menu-burger
-  span:nth-child(3) {
+.button-wrap.right.menu.burger-dots .icon-wrap:hover #menu-burger span:nth-child(3) {
   left: 10px;
 }
 
-.button-wrap.right.menu.burger-dots
-  .icon-wrap:hover
-  #menu-burger.open
-  span:nth-child(1) {
+.button-wrap.right.menu.burger-dots .icon-wrap:hover #menu-burger.open span:nth-child(1) {
   left: 3px;
 }
 
-.button-wrap.right.menu.burger-dots
-  .icon-wrap:hover
-  #menu-burger.open
-  span:nth-child(3) {
+.button-wrap.right.menu.burger-dots .icon-wrap:hover #menu-burger.open span:nth-child(3) {
   left: 3px;
 }
 
@@ -3549,14 +3521,14 @@ nav.open {
     transition: all 0.1s ease-in-out 0s;
   }
 
-  .flexnav > li > a {
+  .flexnav>li>a {
     font-size: calc(1rem + 12vw);
     line-height: calc(1rem + 11.5vw);
     font-family: "Six Caps", sans-serif;
     text-transform: lowercase;
   }
 
-  .flexnav > li > .touch-button {
+  .flexnav>li>.touch-button {
     width: 100%;
     height: calc(1rem + 11.5vw);
     display: block;
@@ -3614,7 +3586,7 @@ nav.open {
   }
 
   .flexnav:hover li ul li a.active,
-  .flexnav:hover li ul li:hover > a {
+  .flexnav:hover li ul li:hover>a {
     opacity: 1;
   }
 
@@ -3707,6 +3679,10 @@ nav.open {
 }
 
 @media only screen and (max-width: 767px) {
+  #logo img {
+    height: 40px;
+  }
+
   figcaption {
     background-color: rgba(0, 0, 0, 0.3);
     bottom: 0px;
@@ -3882,12 +3858,12 @@ nav.open {
     display: none;
   }
 
-  .flexnav > li > a {
+  .flexnav>li>a {
     font-size: calc(1rem + 13vw);
     line-height: calc(1rem + 12.5vw);
   }
 
-  .flexnav > li > .touch-button {
+  .flexnav>li>.touch-button {
     height: calc(1rem + 12.5vw);
   }
 
@@ -3995,6 +3971,7 @@ nav.open {
 }
 
 @media only screen and (max-width: 479px) {
+
   .one_half,
   .one_third,
   .two_third,
@@ -4074,12 +4051,12 @@ nav.open {
     right: -10px;
   }
 
-  .flexnav > li > a {
+  .flexnav>li>a {
     font-size: calc(1rem + 14vw);
     line-height: calc(1rem + 13.5vw);
   }
 
-  .flexnav > li > .touch-button {
+  .flexnav>li>.touch-button {
     height: calc(1rem + 13.5vw);
   }
 
@@ -4140,12 +4117,6 @@ nav.open {
   }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-  #rotate-device {
-    display: block;
-  }
-}
-
 .buy-template {
   font-family: inherit !important;
   font-size: 16px !important;
@@ -4156,4 +4127,175 @@ nav.open {
 
 .p-relative {
   position: relative;
+}
+
+
+/* Whatsapp icon */
+
+button.wh-ap-btn {
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background-color: #2ecc71;
+  padding: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: opacity 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+button.wh-ap-btn::after {
+  content: "";
+  background-image: url("../images/whats.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+}
+
+button.wh-ap-btn:hover {
+  opacity: 1;
+  background-color: #20bf6b;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wh-api {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.wh-fixed {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.wh-fixed>a {
+  display: block;
+  text-decoration: none;
+}
+
+button.wh-ap-btn::before {
+  content: "Chat with me";
+  display: block;
+  position: absolute;
+  margin-left: -130px;
+  margin-top: 16px;
+  height: 25px;
+  background: #49654e;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 3px;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity 0.4s, width 0.4s, padding 0.5s;
+  padding-top: 7px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+}
+
+.wh-fixed>a:hover button.wh-ap-btn::before {
+  opacity: 1;
+  width: auto;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100px;
+}
+
+/* animacion pulse */
+
+.whatsapp-pulse {
+  width: 60px;
+  height: 60px;
+  left: 10px;
+  bottom: 10px;
+  background: #10b418;
+  position: fixed;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 99;
+  display: inline-block;
+  line-height: 65px;
+}
+
+.whatsapp-pulse:before {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  bottom: -15px;
+  right: -15px;
+  background-color: #10b418;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  opacity: 0.6;
+  -webkit-animation: pulse 1s ease-out;
+  animation: pulse 1.8s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: scale(0.3);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    opacity: 0.3;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  25% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+
+  75% {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }

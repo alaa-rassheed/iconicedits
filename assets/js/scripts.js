@@ -23,6 +23,7 @@ jQuery(function ($) {
 		PlayVideo();
 		ContactMap();
 		CustomFunction();
+		checkScrollPosition();
 	});
 
 
@@ -35,6 +36,7 @@ jQuery(function ($) {
 		//Add here your custom js code
 
 	}// End CustomFunction
+
 
 
 
