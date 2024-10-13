@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://alaa-rassheed.github.io/iconic/" />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link href="assets/css/nice-select2.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
@@ -269,12 +270,12 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <div class="select-box">
-                                                        <select name="service" id="service">
-                                                            <option value="" class="default-val">
-                                                                Choose a service
-                                                            </option>
-                                                            <option value="web-design">Blogger</option>
-                                                            <option value="app-development">Partnership</option>
+                                                        <select id="a-select" class="wide">
+                                                            <option data-display="Select">Nothing</option>
+                                                            <option value="1">Some option</option>
+                                                            <option value="2">Another option</option>
+                                                            <option value="3" disabled>A disabled option</option>
+                                                            <option value="4">Potato</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -408,7 +409,11 @@
 
     <script src="assets/js/common.js"></script>
     <script src="assets/js/contact.js"></script>
+    <script src="assets/js/nice-select2.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script>
+        NiceSelect.bind(document.getElementById("a-select"), { searchable: true, placeholder: 'select', searchtext: 'zoek', selectedtext: 'geselecteerd' });
+    </script>
 </body>
 
 </html>
